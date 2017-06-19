@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -35,10 +35,23 @@ table {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-body {
+html {
   font-family: "Open Sans", Sans-serif; }
 
 header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   height: 54px;
   padding: 8px 16px;
   -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 200, 0.03);
@@ -51,11 +64,32 @@ header {
   color: #02b3e4;
   margin: 16px auto;
   line-height: 2.25rem;
-  font-weight: 300; }
+  font-weight: 100; }
 
 @media (max-width: 520px) {
   .heading {
     font-size: 1.4rem; } }
+
+button {
+  text-transform: uppercase;
+  padding: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: .1s;
+  transition: .1s; }
+
+#login {
+  color: #5d90e2;
+  background: transparent; }
+
+#login:hover {
+  -webkit-box-shadow: 2px 2px 36px rgba(93, 144, 226, 0.25);
+  box-shadow: 2px 2px 36px rgba(93, 144, 226, 0.25);
+  background: rgba(93, 144, 226, 0.2); }
 
 .container {
   display: -webkit-box;
@@ -88,20 +122,10 @@ header {
   border-radius: 4px; }
 
 .cta {
-  outline: none;
   margin: 32px auto;
-  border: none;
   color: white;
-  text-transform: uppercase;
-  padding: 8px;
-  font-size: 16px;
-  border-radius: 4px;
-  font-weight: 600;
-  background: rgba(0, 0, 200, 0.55);
-  cursor: pointer;
-  -webkit-transition: .2s;
-  transition: .2s; }
+  background: #5d90e2; }
 
 .cta:hover {
-  -webkit-box-shadow: 2px 2px 36px rgba(0, 0, 200, 0.15);
-  box-shadow: 2px 2px 36px rgba(0, 0, 200, 0.15); }
+  -webkit-box-shadow: 2px 2px 36px rgba(93, 144, 226, 0.65);
+  box-shadow: 2px 2px 36px rgba(93, 144, 226, 0.65); }
