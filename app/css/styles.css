@@ -113,6 +113,7 @@ header {
     font-size: 1.25em;
     margin: 16px auto; }
   .subheading {
+    display: none;
     font-size: 1em; } }
 
 button {
@@ -207,18 +208,39 @@ button {
   align-items: center;
   margin: 32px auto;
   color: white;
-  background: #5d90e2; }
+  background: #f32c7e; }
 
 .cta:hover {
   -webkit-box-shadow: 2px 2px 36px rgba(93, 144, 226, 0.65);
   box-shadow: 2px 2px 36px rgba(93, 144, 226, 0.65); }
 
-#watch {
+button.cta#watch {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
   margin-top: 8vh;
   font-weight: 300;
   color: #5d90e2;
   background: #fff;
-  z-index: 1; }
+  z-index: 1;
+  width: 147px; }
 
 #navlinks {
   display: -webkit-box;
@@ -234,6 +256,7 @@ button {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  list-style-type: none; }
+  list-style-type: none;
+  text-transform: none; }
   #navlinks li a {
     padding: 8px; }
