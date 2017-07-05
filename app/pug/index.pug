@@ -20,24 +20,27 @@ html
             a(href="#")
               button.navbtn#login Login
       #backgroindimage
+      
       .container
-
-        #main-message
-          //- #white-logo
-            img(src="images/bzk-logo-white.svg")
-          .heading Video Email for Tech Sales & Marketing
-          .subheading Record, send, & track one-to-one personalized video messages direct to your customer’s Email, Social Media, or Text
-          button.cta#watch
-            i.material-icons play_circle_filled
-            |&nbsp watch intro
-        video.video-holder(autoplay muted loop)
-          source(src="https://www.html5rocks.com/en/tutorials/video/basics/devstories.webm" type="video/webm")
+        #vid-cont
+          #main-message
+            #white-logo
+              img(src="images/bzk-logo-white.svg")
+            .heading Video Email for Tech Sales & Marketing
+            .subheading Record, send, & track one-to-one personalized video messages
+            | direct to your customer’s Email, Social Media, or Text
+            button.cta#watch
+              i.material-icons play_circle_filled
+              |&nbsp watch intro
+          .video-holder
+            video(muted loop)
+              source(src="https://www.html5rocks.com/en/tutorials/video/basics/devstories.webm" type="video/webm")
         button.cta Try free version
-        h1 Upcoming pages:
-        ul
-          li#features Features
-          li#team Our team / About us
-          li#pricing Pricing plans
-          li#news News
-          li#blog Blog
-      footer
+      //-   h1 Upcoming pages:
+      //-   ul
+      //-     li#features Features
+      //-     li#team Our team / About us
+      //-     li#pricing Pricing plans
+      //-     li#news News
+      //-     li#blog Blog
+      //- footer

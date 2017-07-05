@@ -59,7 +59,7 @@ header {
     height: 100%; }
 
 .wrapper {
-  background: rgba(93, 144, 226, 0.1); }
+  background: rgba(93, 144, 226, 0.05); }
 
 #white-logo {
   width: 100%;
@@ -85,14 +85,10 @@ header {
   flex-direction: column;
   text-align: center;
   position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
+  top: 0;
   right: 0;
-  width: -webkit-calc(100% + 1px);
-  width: calc(100% + 1px);
-  height: 73.1%;
-  max-width: 130vh;
+  bottom: 0;
+  left: 0;
   padding: 16px;
   border-radius: 4px;
   background: rgba(0, 40, 100, 0.7);
@@ -175,26 +171,24 @@ button {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 16px 0 0 0; }
+  padding: 16px 0 0 0;
+  border: 1px solid red; }
+
+#vid-cont {
+  position: relative;
+  max-width: 130vh;
+  width: 100%; }
 
 .video-holder {
-  width: 100%;
-  max-width: 130vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-shadow: 2px 2px 36px rgba(0, 0, 200, 0.15);
   box-shadow: 2px 2px 36px rgba(0, 0, 200, 0.15);
   border-radius: 4px; }
+  .video-holder video {
+    width: 100%; }
 
 .cta {
   display: -webkit-box;
@@ -219,7 +213,7 @@ button {
   box-shadow: 2px 2px 36px rgba(93, 144, 226, 0.65); }
 
 #watch {
-  margin-top: 20vh;
+  margin-top: 16vh;
   font-weight: 300;
   color: #5d90e2;
   background: #fff;
