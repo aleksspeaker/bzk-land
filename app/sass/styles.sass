@@ -1,6 +1,5 @@
 $btn-font-size: 14px
 $main-blue:  rgb(93,144,226)
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700')
 //reset
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
@@ -16,9 +15,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body
   line-height: 1
+  font-family: "Open Sans", Sans-serif
+  -webkit-font-smoothing: antialiased
 
 ol, ul
   list-style: none
+
 
 blockquote, q
   quotes: none
@@ -48,28 +50,63 @@ table
 
 
 
-html
-  font-family: "Open Sans", Sans-serif
 header
+  // // position: fixed
+  // top: 0
+  // right: 0
+  // left: 0
   display: flex
   flex-direction: row
   justify-content: space-between
   height: 54px
   padding: 8px 16px
-  // border-bottom: 1px solid rgba(0,0,200,.05)
-  box-shadow: 1px 1px 5px rgba(0,0,200,.03)
+  background: transparent
+  box-shadow: 1px 1px 5px rgba(93,144,226,.1)
   img
     height: 100%
+.wrapper
+  background: rgba(93,144,226,.1)
+#white-logo
+  width: 100%
+  display: flex
+  justify-content: center
+  height: 48px
+#main-message
+  display: flex
+  flex-direction: column
+  text-align: center
+  position: absolute
+  margin-left: auto
+  margin-right: auto
+  left: 0
+  right: 0
+  width: calc(100% + 1px)
+  height: 73.1%
+  max-width: 130vh
+  padding: 16px
+  border-radius: 4px
+  background: rgba(0,40,100,.7)
+  box-shadow: 2px 2px 36px rgba(0,0,200,.15)
+  color: #fff
 .heading
-  font-size: 1.75rem
-  color: #02b3e4
-  margin: 16px auto
+  font-size: 1.75em
+  // color: $main-blue
+  margin: 32px auto 0
   line-height: 2.25rem
-  font-weight: 100
+  font-weight: 300
+.subheading
+  font-size: 1em
+  // color: $main-blue
+  margin: 32px auto 0
+  line-height: 2.25rem
+  font-weight: 400
 
 @media (max-width: 520px)
   .heading
-    font-size: 1.4rem
+    font-size: 1.25em
+    margin: 16px auto
+  .subheading
+    font-size: 1em
 
 button
   text-transform: uppercase
@@ -81,17 +118,35 @@ button
   font-weight: 600
   cursor: pointer
   transition: .1s
-#login
+.navbtn
   color: $main-blue
   background: transparent
-#login:hover
+.navbtn:hover
   box-shadow: 2px 2px 36px rgba(93,144,226,.25)
   background: rgba(93,144,226,.2)
+.navbtn:active
+  transition: 0
+  box-shadow: 2px 2px 36px rgba(93,144,226,.25)
+  background: rgba(93,144,226,.4)
+#login
+  background: $main-blue
+  color: #fff
+#backgroindimage
+  z-index: -1
+  position: absolute
+  top: -60vh
+  left: -15vw
+  transform: rotate(5deg)
+  border-radius: 110% 20%
+  width: 110vw
+  height: 165vh
+  background: linear-gradient(45deg, $main-blue, #fff)
 .container
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
+  padding: 16px 0 0 0
 .video-holder
   width: 100%
   max-width: 130vh
@@ -99,8 +154,25 @@ button
   box-shadow: 2px 2px 36px rgba(0,0,200,.15)
   border-radius: 4px
 .cta
+  display: flex
+  flex-direction: row
+  align-items: center
   margin: 32px auto
   color: white
   background: $main-blue
 .cta:hover
   box-shadow: 2px 2px 36px rgba(93,144,226,.65)
+#watch
+  margin-top: 20vh
+  font-weight: 300
+  color: $main-blue
+  background: #fff
+  z-index: 1
+
+#navlinks
+  display: flex
+  flex-direction: row
+  align-items: center
+  list-style-type: none
+  li a
+    padding: 8px

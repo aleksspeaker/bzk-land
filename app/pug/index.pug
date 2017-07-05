@@ -1,15 +1,36 @@
 html
   head
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet")
     link(rel='stylesheet', type='text/css', href='css/styles.css')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
   body
     .wrapper
       header
-        img(src="images/logo.svg")
-        a(href="https://appdev.bizkonect.com/")
-          button#login Login
+        img#logo(src="images/bzk-logo-white.svg")
+        ul#navlinks
+          li
+            a(href="#")
+              button.navbtn Blog
+          li
+            a(href="#")
+              button.navbtn Pricing
+          li
+            a(href="#")
+              button.navbtn#login Login
+      #backgroindimage
       .container
-        .heading This is how we connect to people
-        video.video-holder(controls)
+
+        #main-message
+          //- #white-logo
+            img(src="images/bzk-logo-white.svg")
+          .heading Video Email for Tech Sales & Marketing
+          .subheading Record, send, & track one-to-one personalized video messages direct to your customer’s Email, Social Media, or Text
+          button.cta#watch
+            i.material-icons play_circle_filled
+            |&nbsp watch intro
+        video.video-holder(autoplay muted loop)
           source(src="https://www.html5rocks.com/en/tutorials/video/basics/devstories.webm" type="video/webm")
         button.cta Try free version
         h1 Upcoming pages:
@@ -19,3 +40,4 @@ html
           li#pricing Pricing plans
           li#news News
           li#blog Blog
+      footer

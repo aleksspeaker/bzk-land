@@ -1,15 +1,31 @@
 
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
   </head>
   <body>
     <div class="wrapper">
-      <header><img src="images/logo.svg"/><a href="https://appdev.bizkonect.com/">
-          <button id="login">Login</button></a></header>
+      <header><img id="logo" src="images/bzk-logo-white.svg"/>
+        <ul id="navlinks">
+          <li><a href="#">
+              <button class="navbtn">Blog</button></a></li>
+          <li><a href="#">
+              <button class="navbtn">Pricing</button></a></li>
+          <li><a href="#">
+              <button class="navbtn" id="login">Login</button></a></li>
+        </ul>
+      </header>
+      <div id="backgroindimage"></div>
       <div class="container">
-        <div class="heading">This is how we connect to people</div>
-        <video class="video-holder" controls="controls">
+        <div id="main-message">
+          <div class="heading">Video Email for Tech Sales & Marketing</div>
+          <div class="subheading">Record, send, & track one-to-one personalized video messages direct to your customer’s Email, Social Media, or Text</div>
+          <button class="cta" id="watch"><i class="material-icons">play_circle_filled</i>&nbsp watch intro</button>
+        </div>
+        <video class="video-holder" autoplay="autoplay" muted="muted" loop="loop">
           <source src="https://www.html5rocks.com/en/tutorials/video/basics/devstories.webm" type="video/webm"/>
         </video>
         <button class="cta">Try free version</button>
@@ -22,6 +38,7 @@
           <li id="blog">Blog</li>
         </ul>
       </div>
+      <footer></footer>
     </div>
   </body>
 </html>
