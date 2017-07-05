@@ -175,17 +175,18 @@ button {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 16px 0 0 0;
-  border: 1px solid red; }
+  padding: 16px 0 0 0; }
 
 #vid-cont {
+  overflow: hidden;
   position: relative;
   max-width: 130vh;
-  width: 100%; }
+  width: 100%;
+  border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 36px rgba(0, 0, 200, 0.15);
+  box-shadow: 2px 2px 36px rgba(0, 0, 200, 0.15); }
 
 .video-holder {
-  -webkit-box-shadow: 2px 2px 36px rgba(0, 0, 200, 0.15);
-  box-shadow: 2px 2px 36px rgba(0, 0, 200, 0.15);
   border-radius: 4px; }
   .video-holder video {
     width: 100%; }
@@ -213,7 +214,7 @@ button {
   box-shadow: 2px 2px 36px rgba(93, 144, 226, 0.65); }
 
 #watch {
-  margin-top: 16vh;
+  margin-top: 8vh;
   font-weight: 300;
   color: #5d90e2;
   background: #fff;
