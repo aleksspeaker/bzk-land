@@ -10,7 +10,6 @@ mixin chart(data, id, sid, chartData, comment, source)
           .number #{chartData}
         canvas(id=id width='300', height='300')
     .comment #{comment}
-    .source #{source}
 
         script.
           var ctx = document.getElementById(#{sid}).getContext('2d');
@@ -78,10 +77,11 @@ html
       .container
         #charts.row
           .heading.col-12.text-center Why Video?
-          +chart("[65, 35]", "ch1", "'ch1'", "65%", "Executives who have visited a website after watching a video", "Forbes Insights")
-          +chart("[42, 68]", "ch2", "'ch2'", "42%", "Executives who have made a business related purchase after watch a video", "Forbes Insights")
-          +chart("[39, 61]", "ch3", "'ch3'", "39%", "Executive who called a vendor after watching their video", "Forbes Insights")
-          +chart("[59, 41]", "ch4", "'ch4'", "59%", "Executives who prefer to watch video instead of reading text, if both are available on the same page", "Forbes Insights")
+          +chart("[65, 35]", "ch1", "'ch1'", "65%", "Executives who have visited a website after watching a video")
+          +chart("[42, 68]", "ch2", "'ch2'", "42%", "Executives who have made a business related purchase after watch a video")
+          +chart("[39, 61]", "ch3", "'ch3'", "39%", "Executives who called a vendor after watching their video")
+          +chart("[59, 41]", "ch4", "'ch4'", "59%", "Executives who prefer to watch video instead of reading text, if both are available on the same page")
+          .col-12.source *Forbers Insights
 
 
       //-   h1 Upcoming pages:

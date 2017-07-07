@@ -287,8 +287,8 @@ button.cta#watch {
   line-height: 1.5rem; }
 
 .source {
-  text-align: center;
-  font-size: 1rem;
+  text-align: end;
+  font-size: .75rem;
   color: rgba(0, 0, 0, 0.54);
   line-height: 1rem;
   font-weight: 400; }
@@ -317,4 +317,5 @@ button.cta#watch {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
-  height: 4rem; }
+  height: 4rem;
+  color: #5d90e2; }
