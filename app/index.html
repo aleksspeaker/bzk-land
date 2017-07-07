@@ -1,14 +1,19 @@
 
 <html>
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
   </head>
   <body>
     <div class="wrapper">
-      <header><img id="logo" src="images/bzk-logo-white.svg"/>
+      <header><img id="logo" src="images/logo.svg"/>
         <ul id="navlinks">
           <li><a href="#">
               <button class="navbtn">Blog</button></a></li>
@@ -27,14 +32,133 @@
             <button class="cta" id="watch"><i class="material-icons">play_circle_filled</i>&nbsp watch intro</button>
           </div>
           <div class="video-holder">
-            <video autoplay="autoplay" muted="muted" loop="loop">
+            <video muted="muted" loop="loop">
               <source src="https://www.html5rocks.com/en/tutorials/video/basics/devstories.webm" type="video/webm"/>
             </video>
           </div>
         </div>
         <button class="cta">Try free version</button>
       </div>
-      <div id="backgroundimage"></div>
+      <div class="container">
+        <div id="charts">
+          <div class="chart row">
+            <div class="chartdata col">
+              <div class="digit"><span>65%</span></div>
+              <canvas id="ch1" width="300" height="300"></canvas>
+              <div class="comment"></div>
+              <div class="source">
+                <script>var ctx = document.getElementById('ch1').getContext('2d');
+                  var chart = new Chart(ctx, {
+                      // The type of chart we want to create
+                      type: 'doughnut',
+                      // The data for our dataset
+                      data: {
+                          labels: [],
+                          datasets: [{
+                              backgroundColor: ['rgb(93,144,226)','rgba(255, 255, 255,0)'],
+                              borderColor: 'rgb(93,144,226)',
+                              data: [65, 35],
+                          }]
+                      },
+                      // Configuration options go here
+                      options: {
+                      cutoutPercentage: 85,  // Line width
+                      rotation: 1.56,
+                      }
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="chart row">
+            <div class="chartdata col">
+              <div class="digit"><span>42%</span></div>
+              <canvas id="ch2" width="300" height="300"></canvas>
+              <div class="comment"></div>
+              <div class="source">
+                <script>var ctx = document.getElementById('ch2').getContext('2d');
+                  var chart = new Chart(ctx, {
+                      // The type of chart we want to create
+                      type: 'doughnut',
+                      // The data for our dataset
+                      data: {
+                          labels: [],
+                          datasets: [{
+                              backgroundColor: ['rgb(93,144,226)','rgba(255, 255, 255,0)'],
+                              borderColor: 'rgb(93,144,226)',
+                              data: [42, 68],
+                          }]
+                      },
+                      // Configuration options go here
+                      options: {
+                      cutoutPercentage: 85,  // Line width
+                      rotation: 1.56,
+                      }
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="chart row">
+            <div class="chartdata col">
+              <div class="digit"><span>39%</span></div>
+              <canvas id="ch3" width="300" height="300"></canvas>
+              <div class="comment"></div>
+              <div class="source">
+                <script>var ctx = document.getElementById('ch3').getContext('2d');
+                  var chart = new Chart(ctx, {
+                      // The type of chart we want to create
+                      type: 'doughnut',
+                      // The data for our dataset
+                      data: {
+                          labels: [],
+                          datasets: [{
+                              backgroundColor: ['rgb(93,144,226)','rgba(255, 255, 255,0)'],
+                              borderColor: 'rgb(93,144,226)',
+                              data: [39, 61],
+                          }]
+                      },
+                      // Configuration options go here
+                      options: {
+                      cutoutPercentage: 85,  // Line width
+                      rotation: 1.56,
+                      }
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="chart row">
+            <div class="chartdata col">
+              <div class="digit"><span>59%</span></div>
+              <canvas id="ch4" width="300" height="300"></canvas>
+              <div class="comment"></div>
+              <div class="source">
+                <script>var ctx = document.getElementById('ch4').getContext('2d');
+                  var chart = new Chart(ctx, {
+                      // The type of chart we want to create
+                      type: 'doughnut',
+                      // The data for our dataset
+                      data: {
+                          labels: [],
+                          datasets: [{
+                              backgroundColor: ['rgb(93,144,226)','rgba(255, 255, 255,0)'],
+                              borderColor: 'rgb(93,144,226)',
+                              data: [59, 41],
+                          }]
+                      },
+                      // Configuration options go here
+                      options: {
+                      cutoutPercentage: 85,  // Line width
+                      rotation: 1.56,
+                      }
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
