@@ -102,7 +102,7 @@ header
   // color: $main-blue
   margin: 32px auto 0
   line-height: 2.25rem
-  font-weight: 400
+  font-weight: 600
 
 @media (max-width: 520px)
   #white-logo
@@ -250,3 +250,68 @@ button.cta#watch
 //   display: flex
 //   flex-direction: row
 //   justify-content: center
+
+
+.twitter-outline, .twitter-icon
+  transition: 300ms all
+  transform-origin: 50% 50%
+.twitter-icon-group:hover
+  cursor: pointer
+  .twitter-outline 
+    transform: scale(0)
+  .twitter-icon
+.twitter-icon-group:active,
+.twitter-icon-group:visited
+  .twitter-outline
+    transform: scale(0)
+.twitter-icon
+  transform: scale(3)
+  stroke: #4099ff
+  opacity: 0
+
+
+// END OF TWITTER ICON ANIMATION
+// =============================
+// YOUTUBE ICON ANIMATION
+
+
+.youtube-icon, .youtube-outline, .youtube-inner-circle
+  transition: 300ms all
+  transform-origin: 50% 50%
+.youtube-icon-group:hover
+  cursor: pointer
+  .youtube-outline
+    transform: scale(1.2)
+  .youtube-inner-circle
+    fill: #f26768
+  .youtube-icon
+    stroke: #fff
+    transform: scale(1.3)
+
+// END OF YOUTUBE ICON ANIMATION
+// ==============================
+// YOUTUBE ICON ANIMATION
+
+
+.facebook-outline, .facebook-detail, .fbicon
+  transition: 300ms  all
+  transform-origin: 50% 50%
+.facebook-detail
+  opacity: 0
+.facebook-icon-group:hover
+  cursor: pointer
+  .facebook-outline
+    transform: scale(2)
+    opacity: 0
+  .facebook-detail
+    transform: scale(0.8)
+    opacity: 1
+  .fbicon 
+    transform: scale(1.3)
+.facebook-icon-group:active 
+  .facebook-detail 
+    transform: scale(2)
+    opacity: 0
+
+footer
+  border-top: 1px dotted rgba(0,0,0,.1)
