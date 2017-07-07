@@ -1,11 +1,16 @@
-mixin chart(data, id, sid, chartData)
-  .chart.row
-    .chartdata.col
-      .digit
-        span #{chartData}
-      canvas(id=id width='300', height='300')
-      .comment #{comment}
-      .source #{source}
+// TASK:
+
+// 1. Put chart and digit to the separate container
+
+mixin chart(data, id, sid, chartData, comment, source)
+  .chart.col-3
+    .chartdata
+      div
+        .digit
+          .number #{chartData}
+        canvas(id=id width='300', height='300')
+    .comment #{comment}
+    .source #{source}
 
         script.
           var ctx = document.getElementById(#{sid}).getContext('2d');
@@ -71,7 +76,7 @@ html
               source(src="https://www.html5rocks.com/en/tutorials/video/basics/devstories.webm" type="video/webm")
         button.cta Try free version
       .container
-        #charts
+        #charts.row
           +chart("[65, 35]", "ch1", "'ch1'", "65%", "Executives who have visited a website after watching a video", "Forbes Insights")
           +chart("[42, 68]", "ch2", "'ch2'", "42%", "Executives who have made a business related purchase after watch a video", "Forbes Insights")
           +chart("[39, 61]", "ch3", "'ch3'", "39%", "Executive who called a vendor after watching their video", "Forbes Insights")

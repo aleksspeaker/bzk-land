@@ -1,4 +1,6 @@
 
+<!-- TASK:-->
+<!-- 1. Put chart and digit to the separate container-->
 <html>
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"/>
@@ -40,121 +42,137 @@
         <button class="cta">Try free version</button>
       </div>
       <div class="container">
-        <div id="charts">
-          <div class="chart row">
-            <div class="chartdata col">
-              <div class="digit"><span>65%</span></div>
-              <canvas id="ch1" width="300" height="300"></canvas>
-              <div class="comment"></div>
-              <div class="source">
-                <script>var ctx = document.getElementById('ch1').getContext('2d');
-                  var chart = new Chart(ctx, {
-                      // The type of chart we want to create
-                      type: 'doughnut',
-                      // The data for our dataset
-                      data: {
-                          labels: [],
-                          datasets: [{
-                              backgroundColor: ['rgb(93,144,226)','rgba(255, 255, 255,0)'],
-                              borderColor: 'rgb(93,144,226)',
-                              data: [65, 35],
-                          }]
-                      },
-                      // Configuration options go here
-                      options: {
-                      cutoutPercentage: 85,  // Line width
-                      rotation: 1.56,
-                      }
-                  });
-                </script>
+        <div class="row" id="charts">
+          <div class="chart col-3">
+            <div class="chartdata">
+              <div>
+                <div class="digit">
+                  <div class="number">65%</div>
+                </div>
+                <canvas id="ch1" width="300" height="300"></canvas>
               </div>
             </div>
-          </div>
-          <div class="chart row">
-            <div class="chartdata col">
-              <div class="digit"><span>42%</span></div>
-              <canvas id="ch2" width="300" height="300"></canvas>
-              <div class="comment"></div>
-              <div class="source">
-                <script>var ctx = document.getElementById('ch2').getContext('2d');
-                  var chart = new Chart(ctx, {
-                      // The type of chart we want to create
-                      type: 'doughnut',
-                      // The data for our dataset
-                      data: {
-                          labels: [],
-                          datasets: [{
-                              backgroundColor: ['rgb(93,144,226)','rgba(255, 255, 255,0)'],
-                              borderColor: 'rgb(93,144,226)',
-                              data: [42, 68],
-                          }]
-                      },
-                      // Configuration options go here
-                      options: {
-                      cutoutPercentage: 85,  // Line width
-                      rotation: 1.56,
-                      }
-                  });
-                </script>
-              </div>
+            <div class="comment">Executives who have visited a website after watching a video</div>
+            <div class="source">Forbes Insights
+              <script>var ctx = document.getElementById('ch1').getContext('2d');
+                var chart = new Chart(ctx, {
+                    // The type of chart we want to create
+                    type: 'doughnut',
+                    // The data for our dataset
+                    data: {
+                        labels: [],
+                        datasets: [{
+                            backgroundColor: ['rgb(93,144,226)','rgba(255, 255, 255,0)'],
+                            borderColor: 'rgb(93,144,226)',
+                            data: [65, 35],
+                        }]
+                    },
+                    // Configuration options go here
+                    options: {
+                    cutoutPercentage: 85,  // Line width
+                    rotation: 1.56,
+                    }
+                });
+              </script>
             </div>
           </div>
-          <div class="chart row">
-            <div class="chartdata col">
-              <div class="digit"><span>39%</span></div>
-              <canvas id="ch3" width="300" height="300"></canvas>
-              <div class="comment"></div>
-              <div class="source">
-                <script>var ctx = document.getElementById('ch3').getContext('2d');
-                  var chart = new Chart(ctx, {
-                      // The type of chart we want to create
-                      type: 'doughnut',
-                      // The data for our dataset
-                      data: {
-                          labels: [],
-                          datasets: [{
-                              backgroundColor: ['rgb(93,144,226)','rgba(255, 255, 255,0)'],
-                              borderColor: 'rgb(93,144,226)',
-                              data: [39, 61],
-                          }]
-                      },
-                      // Configuration options go here
-                      options: {
-                      cutoutPercentage: 85,  // Line width
-                      rotation: 1.56,
-                      }
-                  });
-                </script>
+          <div class="chart col-3">
+            <div class="chartdata">
+              <div>
+                <div class="digit">
+                  <div class="number">42%</div>
+                </div>
+                <canvas id="ch2" width="300" height="300"></canvas>
               </div>
             </div>
+            <div class="comment">Executives who have made a business related purchase after watch a video</div>
+            <div class="source">Forbes Insights
+              <script>var ctx = document.getElementById('ch2').getContext('2d');
+                var chart = new Chart(ctx, {
+                    // The type of chart we want to create
+                    type: 'doughnut',
+                    // The data for our dataset
+                    data: {
+                        labels: [],
+                        datasets: [{
+                            backgroundColor: ['rgb(93,144,226)','rgba(255, 255, 255,0)'],
+                            borderColor: 'rgb(93,144,226)',
+                            data: [42, 68],
+                        }]
+                    },
+                    // Configuration options go here
+                    options: {
+                    cutoutPercentage: 85,  // Line width
+                    rotation: 1.56,
+                    }
+                });
+              </script>
+            </div>
           </div>
-          <div class="chart row">
-            <div class="chartdata col">
-              <div class="digit"><span>59%</span></div>
-              <canvas id="ch4" width="300" height="300"></canvas>
-              <div class="comment"></div>
-              <div class="source">
-                <script>var ctx = document.getElementById('ch4').getContext('2d');
-                  var chart = new Chart(ctx, {
-                      // The type of chart we want to create
-                      type: 'doughnut',
-                      // The data for our dataset
-                      data: {
-                          labels: [],
-                          datasets: [{
-                              backgroundColor: ['rgb(93,144,226)','rgba(255, 255, 255,0)'],
-                              borderColor: 'rgb(93,144,226)',
-                              data: [59, 41],
-                          }]
-                      },
-                      // Configuration options go here
-                      options: {
-                      cutoutPercentage: 85,  // Line width
-                      rotation: 1.56,
-                      }
-                  });
-                </script>
+          <div class="chart col-3">
+            <div class="chartdata">
+              <div>
+                <div class="digit">
+                  <div class="number">39%</div>
+                </div>
+                <canvas id="ch3" width="300" height="300"></canvas>
               </div>
+            </div>
+            <div class="comment">Executive who called a vendor after watching their video</div>
+            <div class="source">Forbes Insights
+              <script>var ctx = document.getElementById('ch3').getContext('2d');
+                var chart = new Chart(ctx, {
+                    // The type of chart we want to create
+                    type: 'doughnut',
+                    // The data for our dataset
+                    data: {
+                        labels: [],
+                        datasets: [{
+                            backgroundColor: ['rgb(93,144,226)','rgba(255, 255, 255,0)'],
+                            borderColor: 'rgb(93,144,226)',
+                            data: [39, 61],
+                        }]
+                    },
+                    // Configuration options go here
+                    options: {
+                    cutoutPercentage: 85,  // Line width
+                    rotation: 1.56,
+                    }
+                });
+              </script>
+            </div>
+          </div>
+          <div class="chart col-3">
+            <div class="chartdata">
+              <div>
+                <div class="digit">
+                  <div class="number">59%</div>
+                </div>
+                <canvas id="ch4" width="300" height="300"></canvas>
+              </div>
+            </div>
+            <div class="comment">Executives who prefer to watch video instead of reading text, if both are available on the same page</div>
+            <div class="source">Forbes Insights
+              <script>var ctx = document.getElementById('ch4').getContext('2d');
+                var chart = new Chart(ctx, {
+                    // The type of chart we want to create
+                    type: 'doughnut',
+                    // The data for our dataset
+                    data: {
+                        labels: [],
+                        datasets: [{
+                            backgroundColor: ['rgb(93,144,226)','rgba(255, 255, 255,0)'],
+                            borderColor: 'rgb(93,144,226)',
+                            data: [59, 41],
+                        }]
+                    },
+                    // Configuration options go here
+                    options: {
+                    cutoutPercentage: 85,  // Line width
+                    rotation: 1.56,
+                    }
+                });
+              </script>
             </div>
           </div>
         </div>
