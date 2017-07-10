@@ -12,7 +12,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   line-height: 1;
   font-family: "Open Sans", Sans-serif;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1); }
 
 ol, ul {
   list-style: none; }
