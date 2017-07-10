@@ -1,6 +1,4 @@
-// TASK:
 
-// 1. Put chart and digit to the separate container
 
 mixin chart(data, id, sid, chartData, comment, source)
   .chart.col.col-lg-3.col-sm-6
@@ -31,6 +29,13 @@ mixin chart(data, id, sid, chartData, comment, source)
               rotation: 1.56,
               }
           });
+mixin feature(icon, name, text)
+  .feature
+    div
+      i.material-icons.icon #{icon}
+    .featue-container
+      .feature-name #{name}
+      .feature-text #{text}
 html
   head
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous")
@@ -84,43 +89,30 @@ html
           .col-12.source *Forbers Insights
           .heading.col-12.text-center Why Bizkonect?
           #features
-            .feature
-              div
-                i.material-icons.icon lightbulb_outline
-              .featue-container
-                .feature-name Domain Expertise
-                .feature-text Unlike other video email platforms, BizKonect is designed by people with over 20 years experience in tech sales, managed services, and value-add reselling
-            .feature
-              div
-                i.material-icons.icon palette
-              .featue-container
-                .feature-name Industry Specific Marketing Tools
-                .feature-text One-to-One & Group coaching on sales and marketing, private sales training, marketing consulting
-            .feature
-              div
-                i.material-icons.icon fitness_center
-              .featue-container 
-                .feature-name Sales Training
-                .feature-text One-to-One & Group coaching on sales and marketing, private sales training, marketing consulting
-            .feature
-              div
-                i.material-icons.icon forum
-              .featue-container
-                .feature-name Two-Way Conversation
-                .feature-text Have two-way conversations between you and your customers, inside our app. Connect, gather feedback, solve problems, and develop meaningful relationships with your customers, on your terms.
-
-            //- .subheading Mobile App
-            //- p Need content here
+            div
+              +feature("supervisor_account", "Domain expertise", "Unlike other video email platforms, BizKonect is designed by people with over 20 years experience in tech sales, managed services, and value-add reselling")
+              +feature("palette", "Industry Specific Marketing Tools", "One-to-One & Group coaching on sales and marketing, private sales training, marketing consulting")
+              +feature("fitness_center", "Sales Training", "One-to-One & Group coaching on sales and marketing, private sales training, marketing consulting")
+              +feature("forum", "Two-Way Conversation", "Have two-way conversations between you and your customers, inside our app. Connect, gather feedback, solve problems, and develop meaningful relationships with your customers, on your terms.")
+            div
+              +feature("smartphone", "Mobile App", "Unlike other video email platforms, BizKonect is designed by people with over 20 years experience in tech sales, managed services, and value-add reselling")
+              +feature("lightbulb_outline", "Insights", "One-to-One & Group coaching on sales and marketing, private sales training, marketing consulting")
+              +feature("extension", "Integrating what counts", "Need content; to include Connectwise, Gmail, Outlook, etc.")
+              +feature("face", "Next Best thing to Face-to-Face Selling", "It’s the best way to build your brand because it’s YOU! It’s more authentic and will help you build Trust")
+          .heading.col-12.text-center Use cases
+          #usecases
+            .case.col-6
+              .case-img
+                img(src="images/phone.jpg")
+              .case-descr
+                .case-name Cold calls
+                .case-text Nobody likes cold calls. It always feels awkward to call to somebody for the first time. It's difficult to find the right words and deliver your message in 30 seconds.
 
 
-            //- .subheading Insights
-            //- p Need Content here
 
-            //- .subheading Integrating what counts
-            //- p Need content; to include Connectwise, Gmail, Outlook, etc.
 
-            //- .subheading Next Best thing to Face-to-Face Selling
-            //- p It’s the best way to build your brand because it’s YOU! It’s more authentic and will help you build Trust
+            //- .subheading 
+            //- p 
 
 
       //-   h1 Upcoming pages:
