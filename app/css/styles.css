@@ -82,6 +82,9 @@ header {
   -ms-flex-line-pack: center;
   align-content: center;
   height: 72px; }
+  #white-logo img {
+    height: 72px;
+    width: 72px; }
 
 #main-message {
   display: -webkit-box;
