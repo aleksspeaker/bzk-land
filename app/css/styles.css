@@ -466,10 +466,7 @@ button.cta#watch {
     -webkit-transform: skew(10deg);
     -ms-transform: skew(10deg);
     transform: skew(10deg);
-    margin-right: -50px;
-    -webkit-filter: sepia(1) invert(1);
-    filter: sepia(1) invert(1);
-    opacity: .4; }
+    margin-right: -50px; }
 
 .case-descr {
   margin-left: 48px; }
