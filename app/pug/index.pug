@@ -76,7 +76,7 @@ html
               i.material-icons play_circle_filled
               |&nbsp watch intro
           .video-holder
-            video(autoplay muted loop)
+            video( muted loop)
               source(src="https://www.html5rocks.com/en/tutorials/video/basics/devstories.webm" type="video/webm")
         a(target="_blank" href="https://appdev.bizkonect.com/")
           button.cta Try free version
@@ -123,8 +123,15 @@ html
       //-     li#pricing Pricing plans
       //-     li#blog Blog
       footer
-        row
-          .social.col-12.text-center
+        .row.footer-first-row
+          .col-md-6.text-center
+            .subheading Want to receive unique proposition?
+            form.form-inline.email-capture
+              form-group
+                label.sr-only(for="enterEmail") Enter your email
+                input#enterEmail.form-control(type="email" placeholder="Enter your email")
+              button.btn(type="submit") Send
+          .social.col-md-6.text-center
             svg.social-icons(xmlns='http://www.w3.org/2000/svg', width='500', height='200', viewbox='0 0 500 200')
               g.youtube-icon-group
                 circle.youtube-outline(fill='transparent', stroke='#F26768', stroke-miterlimit='10', cx='250', cy='100.5', r='35.2')

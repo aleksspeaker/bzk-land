@@ -32,7 +32,7 @@
             <button class="cta" id="watch"><i class="material-icons">play_circle_filled</i>&nbsp watch intro</button>
           </div>
           <div class="video-holder">
-            <video autoplay="autoplay" muted="muted" loop="loop">
+            <video muted="muted" loop="loop">
               <source src="https://www.html5rocks.com/en/tutorials/video/basics/devstories.webm" type="video/webm"/>
             </video>
           </div>
@@ -258,8 +258,18 @@
         </div>
       </div>
       <footer>
-        <row>
-          <div class="social col-12 text-center">
+        <div class="row footer-first-row">
+          <div class="col-md-6 text-center">
+            <div class="subheading">Want to receive unique proposition?</div>
+            <form class="form-inline email-capture">
+              <form-group>
+                <label class="sr-only" for="enterEmail">Enter your email</label>
+                <input class="form-control" id="enterEmail" type="email" placeholder="Enter your email"/>
+              </form-group>
+              <button class="btn" type="submit">Send</button>
+            </form>
+          </div>
+          <div class="social col-md-6 text-center">
             <svg class="social-icons" xmlns="http://www.w3.org/2000/svg" width="500" height="200" viewbox="0 0 500 200">
               <g class="youtube-icon-group">
                 <circle class="youtube-outline" fill="transparent" stroke="#F26768" stroke-miterlimit="10" cx="250" cy="100.5" r="35.2"></circle>
@@ -278,7 +288,7 @@
               </g>
             </svg>
           </div>
-        </row>
+        </div>
       </footer>
     </div>
   </body>
