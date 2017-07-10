@@ -385,7 +385,10 @@ button {
 .feature-name {
   font-size: 1.25rem;
   font-weight: 500;
-  line-height: 2rem; }
+  margin-bottom: 16px; }
+
+.feature-text {
+  margin-bottom: 24px; }
 
 .twitter-outline, .twitter-icon {
   -webkit-transition: 300ms all;
