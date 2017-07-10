@@ -1,12 +1,12 @@
 
 
 mixin chart(data, id, sid, chartData, comment, source)
-  .chart.col.col-lg-3.col-sm-6
+  .chart.col-12.col-lg-3.col-sm-6
     .chartdata
-      div
+      .col-8.col-xl-12.col-lg-12.col-md-12.col-sm-12
         .digit
           .number #{chartData}
-        canvas(id=id width='300', height='300')
+        canvas(id=id)
     .comment #{comment}
 
         script.
@@ -67,8 +67,8 @@ html
           #main-message
             #white-logo
               img(src="images/bzk-logo-white.svg")
-            .heading Video Email for Tech Sales & Marketing
-            .subheading
+            .main-heading Video Email for Tech Sales & Marketing
+            .main-subheading
               |Record, send, & track one-to-one personalized video messages
               br
               | direct to your customer’s Email, Social Media, or Text
@@ -87,44 +87,35 @@ html
           +chart("[39, 61]", "ch3", "'ch3'", "39%", "Executives who called a vendor after watching their video")
           +chart("[59, 41]", "ch4", "'ch4'", "59%", "Executives who prefer to watch video instead of reading text, if both are available on the same page")
           .col-12.source *Forbers Insights
-          .heading.col-12.text-center Why Bizkonect?
-          #features
-            div
-              +feature("supervisor_account", "Domain expertise", "Unlike other video email platforms, BizKonect is designed by people with over 20 years experience in tech sales, managed services, and value-add reselling")
-              +feature("palette", "Industry Specific Marketing Tools", "One-to-One & Group coaching on sales and marketing, private sales training, marketing consulting")
-              +feature("fitness_center", "Sales Training", "One-to-One & Group coaching on sales and marketing, private sales training, marketing consulting")
-              +feature("forum", "Two-Way Conversation", "Have two-way conversations between you and your customers, inside our app. Connect, gather feedback, solve problems, and develop meaningful relationships with your customers, on your terms.")
-            div
-              +feature("smartphone", "Mobile App", "Unlike other video email platforms, BizKonect is designed by people with over 20 years experience in tech sales, managed services, and value-add reselling")
-              +feature("lightbulb_outline", "Insights", "One-to-One & Group coaching on sales and marketing, private sales training, marketing consulting")
-              +feature("extension", "Integrating what counts", "Need content; to include Connectwise, Gmail, Outlook, etc.")
-              +feature("face", "Next Best thing to Face-to-Face Selling", "It’s the best way to build your brand because it’s YOU! It’s more authentic and will help you build Trust")
-          .heading.col-12.text-center Use cases
-          #usecases
-            .case.col-6
-              .case-img
-                img(src="images/phone.jpg")
-              .case-descr
-                .case-name Cold calls
-                .case-text Nobody likes cold calls. It always feels awkward to call to somebody for the first time. It's difficult to find the right words and deliver your message in 30 seconds.
-
-
-
-
-            //- .subheading 
-            //- p 
-
+          .heading.text-center Why Bizkonect?
+        #features
+          .col-lg-6
+            +feature("supervisor_account", "Domain expertise", "Unlike other video email platforms, BizKonect is designed by people with over 20 years experience in tech sales, managed services, and value-add reselling")
+            +feature("palette", "Industry Specific Marketing Tools", "One-to-One & Group coaching on sales and marketing, private sales training, marketing consulting")
+            +feature("fitness_center", "Sales Training", "One-to-One & Group coaching on sales and marketing, private sales training, marketing consulting")
+            +feature("forum", "Two-Way Conversation", "Have two-way conversations between you and your customers, inside our app. Connect, gather feedback, solve problems, and develop meaningful relationships with your customers, on your terms.")
+          .col-lg-6
+            +feature("smartphone", "Mobile App", "Unlike other video email platforms, BizKonect is designed by people with over 20 years experience in tech sales, managed services, and value-add reselling")
+            +feature("lightbulb_outline", "Insights", "One-to-One & Group coaching on sales and marketing, private sales training, marketing consulting")
+            +feature("extension", "Integrating what counts", "Need content; to include Connectwise, Gmail, Outlook, etc.")
+            +feature("face", "Next Best thing to Face-to-Face Selling", "It’s the best way to build your brand because it’s YOU! It’s more authentic and will help you build Trust")
+        .heading.text-center Use cases
+        #usecases
+          .case
+            .case-img.col-12.col-md-3
+              .case-name Cold calls
+              img(src="images/phone.jpg")
+            .case-text.col-md-8 Nobody likes cold calls. It always feels awkward to call to somebody for the first time. It's difficult to find the right words and deliver your message in 30 seconds.
 
       //-   h1 Upcoming pages:
       //-   ul
-      //-     li#features Features
       //-     li#team Our team / About us
       //-     li#pricing Pricing plans
       //-     li#blog Blog
       footer
         row
-          .social.col.text-center
-            svg(xmlns='http://www.w3.org/2000/svg', width='500', height='200', viewbox='0 0 500 200')
+          .social.col-12.text-center
+            svg.social-icons(xmlns='http://www.w3.org/2000/svg', width='500', height='200', viewbox='0 0 500 200')
               g.youtube-icon-group
                 circle.youtube-outline(fill='transparent', stroke='#F26768', stroke-miterlimit='10', cx='250', cy='100.5', r='35.2')
                 circle.youtube-inner-circle(fill='transparent', stroke='#F26768', stroke-miterlimit='10', cx='250', cy='100.5', r='35.2')
